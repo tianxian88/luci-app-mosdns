@@ -52,7 +52,7 @@ jobs:
         if: ${{ env.SKIP_BUILD == '0' }}
         continue-on-error: true
         run: |
-          tar -zcvf ${{ env.ARCH }}.tar.gz -C bin/packages/${{ env.EFFECTIVE_ARCH }}/ packages_ci
+          tar -zcvf ${{ env.ARCH }}.tar.gz -C bin/packages/${{ env.EFFECTIVE_ARCH }}/packages_ci .
 
       - name: Upload packages
         if: ${{ env.SKIP_BUILD == '0' }}
